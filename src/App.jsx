@@ -1,4 +1,5 @@
 import React from 'react'
+import { Info, Navbar, Search } from './components'
 import { GlobalStyles } from './styles'
 
 const App = () => {
@@ -6,9 +7,10 @@ const App = () => {
 		<>
 			<GlobalStyles />
 			<div className='App'>
-				<div>Navbar component here</div>
-				<form>search component here</form>
-				<main>search component here</main>
+        <Navbar />
+        <Search />
+        <Info />
+
 			</div>
 		</>
 	)

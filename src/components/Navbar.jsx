@@ -4,7 +4,7 @@ const Navbar = () => {
 	return (
 		<>
 			<div>Logo</div>
-			<button className='toggleBtn'></button>
+			<button className='toggleBtn'>toggle</button>
 		</>
 	)
 }
