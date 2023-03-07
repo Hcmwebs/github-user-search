@@ -4,15 +4,11 @@ const GlobalStyles = createGlobalStyle`
 
 
 :root {
-
-
-  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
-  line-height: 1.5;
-  font-weight: 400;
+--bold:700;
+--regular:400;
 
   color-scheme: light dark;
-  color: rgba(255, 255, 255, 0.87);
-  background-color: #242424;
+  font-family: 'Space Mono', monospace;
 }
 
 *, *::before, *::after{
@@ -29,30 +25,21 @@ height: 100%;
 
 
 body {
-  margin: 0px;
-  padding: 0px;
+  font-weight:var(--regular);
+  min-height: 100vh;
   display: grid;
   place-items: center;
-  min-width: 320px;
-  min-height: 100vh;
-  background: white;
-  font-family: 'Space Mono', monospace;
-  font-weight: 400;
-  line-height: 1.75;
 }
-.App{
-  width:min(100%,1440px);
-}
-p {margin-bottom: 1rem;}
+
+p {margin:0;}
 
 h1, h2, h3, h4, h5 {
   margin: 0;
-  font-family: 'Space Mono', monospace;
-  font-weight: 700;
+  font-weight:var(--bold);
   line-height: 1.3;
 }
 h1 {
-  margin-top: 0;
+  margin: 0;
   font-size: 1.802rem;
 }
 
@@ -95,7 +82,10 @@ img, picture, svg {
   max-width:100%;
   object-fit: cover
 }
-
+.sectionCenter{
+  width: 100%;
+  padding-inline: 1.5rem;
+}
 
 `
 export default GlobalStyles
