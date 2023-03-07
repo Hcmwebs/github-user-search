@@ -4,6 +4,8 @@ const GlobalStyles = createGlobalStyle`
 
 
 :root {
+
+
   font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
   line-height: 1.5;
   font-weight: 400;
@@ -11,37 +13,61 @@ const GlobalStyles = createGlobalStyle`
   color-scheme: light dark;
   color: rgba(255, 255, 255, 0.87);
   background-color: #242424;
-
-  font-synthesis: none;
-  text-rendering: optimizeLegibility;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  -webkit-text-size-adjust: 100%;
 }
 
-a {
-  font-weight: 500;
-  color: #646cff;
-  text-decoration: inherit;
+*, *::before, *::after{
+  padding: 0;
+	margin: 0;
+	box-sizing:border-box;
+  font: inherit;
 }
-a:hover {
-  color: #535bf2;
+
+html {
+font-size: 100%; /*16px*/
+height: 100%;
 }
+
 
 body {
   margin: 0px;
+  padding: 0px;
   display: grid;
   place-items: center;
   min-width: 320px;
   min-height: 100vh;
+  background: white;
+  font-family: 'Space Mono', monospace;
+  font-weight: 400;
+  line-height: 1.75;
 }
 .App{
   width:min(100%,1440px);
 }
+p {margin-bottom: 1rem;}
 
+h1, h2, h3, h4, h5 {
+  margin: 0;
+  font-family: 'Space Mono', monospace;
+  font-weight: 700;
+  line-height: 1.3;
+}
 h1 {
-  font-size: 3.2em;
-  line-height: 1.1;
+  margin-top: 0;
+  font-size: 1.802rem;
+}
+
+h2 {font-size: 1.602rem;}
+
+h3 {font-size: 1.424rem;}
+
+h4 {font-size: 1.266rem;}
+
+h5 {font-size: 1.125rem;}
+
+small, .text_small {font-size: 0.889rem;}
+
+a {
+    text-decoration: inherit;
 }
 
 button {
@@ -55,6 +81,7 @@ button {
   cursor: pointer;
   transition: border-color 0.25s;
 }
+
 button:hover {
   border-color: #646cff;
 }
@@ -63,17 +90,10 @@ button:focus-visible {
   outline: 4px auto -webkit-focus-ring-color;
 }
 
-@media (prefers-color-scheme: light) {
-  :root {
-    color: #213547;
-    background-color: #ffffff;
-  }
-  a:hover {
-    color: #747bff;
-  }
-  button {
-    background-color: #f9f9f9;
-  }
+img, picture, svg {
+  display: block;
+  max-width:100%;
+  object-fit: cover
 }
 
 
