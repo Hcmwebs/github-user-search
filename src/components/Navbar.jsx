@@ -5,10 +5,10 @@ const Navbar = () => {
 	return (
 		<Wrapper className='sectionCenter'>
 			<a href='#' className='logo'>
-			devfinder
+				devfinder
 			</a>
 			<button className='toggleBtn'>
-				light
+				<small>light</small>
 				<img src={sun} alt='light icon' />
 			</button>
 		</Wrapper>
@@ -22,15 +22,30 @@ const Wrapper = styled.nav`
 	align-items: center;
 
 	.logo {
+		font-size: 1.625rem;
+		line-height: 2.4375rem;
+		font-weight: var(--bold);
 		color: white;
 	}
 
 	.toggleBtn {
+		padding: 0.75rem 1.5rem;
 		display: flex;
 		justify-content: space-evenly;
 		align-items: center;
 		gap: 1rem;
 		text-transform: uppercase;
+		background-color:transparent;
+
+		small {
+			font-size: 0.8125rem;
+			font-weight: var(--bold);
+			line-height: 1.1875rem;
+		}
+		img{
+			width: 20px;
+			height: 20px;
+		}
 	}
 `
 
