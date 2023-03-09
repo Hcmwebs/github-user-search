@@ -8,13 +8,9 @@ const App = () => {
 		<>
 			<GlobalStyles />
 			<Wrapper className='App'>
-				<header className='sectionCenter' >
-					<Navbar />
-				</header>
-				<main className='sectionCenter'>
-					<Search />
-					<Info />
-				</main>
+				<Navbar />
+				<Search />
+				<Info />
 			</Wrapper>
 		</>
 	)
@@ -23,6 +19,7 @@ const App = () => {
 const Wrapper = styled.div`
 	&.App {
 		width: 375px;
+		padding-block:2rem;
 		outline: 1px solid white;
 		display: grid;
 		place-items: center;
