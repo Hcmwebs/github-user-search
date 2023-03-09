@@ -16,10 +16,10 @@ const App = () => {
 	)
 }
 
-const Wrapper = styled.div`
+const Wrapper = styled.main`
 	&.App {
 		width: 375px;
-		padding-block:2rem;
+		padding-block: 2rem;
 		outline: 1px solid white;
 		display: grid;
 		place-items: center;
