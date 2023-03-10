@@ -6,9 +6,31 @@ const GlobalStyles = createGlobalStyle`
 :root {
 --bold:700;
 --regular:400;
+--btnColor:#FFFFFF ;
+--btnBgColor:#0079FF ;
+--btnHoverBgColor:#60ABFF ;
+--transition-3: all 0.3s ease-in-out;
+}
+.lightTheme{
+  --bgColor:#F6F8FF;
+  --fontColor:#4B6A9B;
+  --appBgColor:#FEFEFE;
+  --headingColor:#2B3442;
+  --logoColor:#222731;
+  --themeBtnColor: #697C9A;
+  --themeBtnHoverColor:#222731;
 
-  color-scheme: light dark;
-  font-family: 'Space Mono', monospace;
+}
+
+.darkTheme{
+  --bgColor:#141D2F;
+  --fontColor:#FFFFFF;
+  --appBgColor:#1E2A47;
+  --headingColor:#FFFFFF;
+  --logoColor:#FFFFFF;
+  --themeBtnColor: #FFFFFF;
+  --themeBtnHoverColor:#90A4D4;
+
 }
 
 *, *::before, *::after{
@@ -19,16 +41,20 @@ const GlobalStyles = createGlobalStyle`
 }
 
 html {
-font-size: 100%; /*16px*/
-height: 100%;
+  color-scheme: light dark;
+  font-size: 100%; /*16px*/
+  height: 100%;
 }
 
 
 body {
+  font-family: 'Space Mono', monospace;
   font-weight:var(--regular);
   min-height: 100vh;
   display: grid;
   place-items: center;
+  background-color: var(--bgColor);
+  color:var(--fontColor)
 }
 
 p {margin:0;}
@@ -64,17 +90,19 @@ button {
   font-size: 1em;
   font-weight: 500;
   font-family: inherit;
-  background-color: #1a1a1a;
+  background-color:var(--btnBgColor);
+  color:var(--btnColor);
+  outline: none;
   cursor: pointer;
-  transition: border-color 0.25s;
+  transition: var(--transition-3);
 }
 
 button:hover {
-  border-color: #646cff;
+  background-color:var(--btnHoverBgColor);
 }
 button:focus,
 button:focus-visible {
-  outline: 4px auto -webkit-focus-ring-color;
+  background-color:var(--btnHoverBgColor);
 }
 
 img, picture, svg {
