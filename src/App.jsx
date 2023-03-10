@@ -1,14 +1,37 @@
-import React from 'react'
+import React, { useState, useEffect } from 'react'
 import { Info, Navbar, Search } from './components'
 import { GlobalStyles } from './styles'
 import styled from 'styled-components'
 
+const getLocalStorageTheme = () => {
+	let theme = 'lightTheme'
+	if (localStorage.getItem('theme')) {
+		theme = localStorage.getItem('theme')
+	}
+	return theme
+}
+
 const App = () => {
+	const [theme, setTheme] = useState(getLocalStorageTheme())
+
+	useEffect(() => {
+		document.documentElement.className = theme
+		localStorage.setItem('theme', theme)
+	}, [theme])
+
+	const toggleTheme = () => {
+		if (theme === 'lightTheme') {
+			setTheme('darkTheme')
+		} else {
+			setTheme('lightTheme')
+		}
+	}
+
 	return (
 		<>
 			<GlobalStyles />
 			<Wrapper className='App'>
-				<Navbar />
+				<Navbar toggleTheme={toggleTheme} theme={theme} />
 				<Search />
 				<Info />
 			</Wrapper>
