@@ -6,12 +6,15 @@ const GlobalStyles = createGlobalStyle`
 :root {
 --bold:700;
 --regular:400;
---btnColor:#FFFFFF ;
---btnBgColor:#0079FF ;
---btnHoverBgColor:#60ABFF ;
 --transition-3: all 0.3s ease-in-out;
 --boxShadow-1: 0px 3px 25px 5px rgba(0,0,0,0.2);
 --boxShadow-2: 0px 3px 25px 5px rgba(0,0,0,0.4);
+--borderRadius: 15px;
+
+--btnColor:#FFFFFF ;
+--btnBgColor:#0079FF ;
+--btnHoverBgColor:#60ABFF ;
+--errorColor:#F74646;
 }
 .lightTheme{
   --bgColor:#F6F8FF;
@@ -86,7 +89,7 @@ a {
 }
 
 button {
-  border-radius: 8px;
+  border-radius: var(--borderRadius);
   border: 1px solid transparent;
   padding: 0.6em 1.2em;
   font-size: 1em;
