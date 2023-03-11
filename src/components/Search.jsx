@@ -11,11 +11,10 @@ const Search = () => {
 		e.preventDefault()
 		if (user) {
 			//display
-		}
-		else{
+		} else {
 			setError(true)
 		}
-		console.log(user);
+		console.log(user)
 		setUser('')
 	}
 	return (
@@ -38,7 +37,7 @@ const Search = () => {
 				<button className='search' type='submit'>
 					Search
 				</button>
-				{error  && <small className='error'>No results</small>}
+				{error && <small className='error'>No results</small>}
 			</div>
 		</Wrapper>
 	)
