@@ -43,7 +43,6 @@ const Wrapper = styled.main`
 	&.App {
 		width: 375px;
 		padding-block: 2rem;
-		outline: 1px solid white;
 		display: grid;
 		place-items: center;
 		gap: 2.25rem;
