@@ -10,6 +10,8 @@ const GlobalStyles = createGlobalStyle`
 --btnBgColor:#0079FF ;
 --btnHoverBgColor:#60ABFF ;
 --transition-3: all 0.3s ease-in-out;
+--boxShadow-1: 0px 3px 25px 5px rgba(0,0,0,0.2);
+--boxShadow-2: 0px 3px 25px 5px rgba(0,0,0,0.4);
 }
 .lightTheme{
   --bgColor:#F6F8FF;
@@ -92,12 +94,14 @@ button {
   font-family: inherit;
   background-color:var(--btnBgColor);
   color:var(--btnColor);
+  box-shadow: var(--boxShadow-1);
   outline: none;
   cursor: pointer;
   transition: var(--transition-3);
 }
 
 button:hover {
+  box-shadow: var(--boxShadow-2);
   background-color:var(--btnHoverBgColor);
 }
 button:focus,
