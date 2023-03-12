@@ -47,6 +47,9 @@ const Wrapper = styled.form`
 	width: 100%;
 	display: grid;
 	place-items: center;
+	border-radius: var(--borderRadius);
+	background-color: var(--appBgColor);
+	box-shadow: var(--boxShadow-1);
 
 	.form-group {
 		width: 100%;
@@ -62,9 +65,7 @@ const Wrapper = styled.form`
 		padding: 1rem 3rem;
 		border: none;
 		outline: none;
-		border-radius: var(--borderRadius);
-		background-color: var(--appBgColor);
-		box-shadow: var(--boxShadow-1);
+		background-color:transparent;
 		&:focus {
 			box-shadow: var(--boxShadow-2);
 		}
