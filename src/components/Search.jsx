@@ -30,7 +30,7 @@ const Search = () => {
 					type='search'
 					aria-label='search'
 					name='user'
-					placeholder='Search Github Username'
+					placeholder='Search Github User'
 					value={user}
 					onChange={handleChange}
 				/>
@@ -65,7 +65,7 @@ const Wrapper = styled.form`
 		padding: 1rem 3rem;
 		border: none;
 		outline: none;
-		background-color:transparent;
+		background-color: transparent;
 		&:focus {
 			box-shadow: var(--boxShadow-2);
 		}
