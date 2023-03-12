@@ -85,7 +85,7 @@ h5 {font-size: 1.125rem;}
 small, .text_small {font-size: 0.889rem;}
 
 a {
-    text-decoration: inherit;
+    text-decoration: none;
 }
 
 button {
