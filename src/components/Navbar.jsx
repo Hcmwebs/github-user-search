@@ -1,10 +1,10 @@
 import React from 'react'
 import styled from 'styled-components'
-import sun from '../assets/icon-sun.svg'
-import moon from '../assets/icon-moon.svg'
+import { useGithubContext } from '../context/useGithubContext'
 import { LightBtn, DarkBtn } from './index'
 
-const Navbar = ({ toggleTheme, theme }) => {
+const Navbar = () => {
+	const { toggleTheme, theme } = useGithubContext()
 	return (
 		<Wrapper className='sectionCenter'>
 			<a href='#' className='logo'>
