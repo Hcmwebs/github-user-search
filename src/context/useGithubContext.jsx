@@ -1,4 +1,5 @@
 import React, {createContext,useContext, useState, useEffect} from 'react'
+const rootUrl = 'https://api.github.com'
 
 const GithubContext = createContext()
 

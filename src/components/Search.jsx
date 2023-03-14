@@ -3,7 +3,6 @@ import styled from 'styled-components'
 
 const Search = () => {
 	const [user, setUser] = useState('')
-	const [error, setError] = useState(false)
 	const handleChange = (e) => {
 		setUser(e.target.value)
 	}
@@ -11,12 +10,7 @@ const Search = () => {
 		e.preventDefault()
 		if (user) {
 			//display
-		} else {
-			setError(true)
 		}
-		console.log(user)
-		setUser('')
-	}
 	return (
 		<Wrapper className='sectionCenter' onSubmit={handleSubmit}>
 			<div className='form-group'>
