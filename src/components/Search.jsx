@@ -1,16 +1,19 @@
 import React, { useState } from 'react'
 import styled from 'styled-components'
+import { useGithubContext } from '../context/useGithubContext'
 
 const Search = () => {
 	const [user, setUser] = useState('')
-	const[error,setError ] = useState(false)
+	const { isLoading, error, searchGithubUser } = useGithubContext()
+	const { show, msg } = error
 	const handleChange = (e) => {
 		setUser(e.target.value)
 	}
 	const handleSubmit = (e) => {
 		e.preventDefault()
 		if (user) {
-			//display
+			searchGithubUser(user)
+			setUser('')
 		}
 	}
 	return (
@@ -23,9 +26,8 @@ const Search = () => {
 					/>
 				</svg>
 				<input
-					type='search'
+					type='text'
 					aria-label='search'
-					name='user'
 					placeholder='Search Github User'
 					value={user}
 					onChange={handleChange}
@@ -33,8 +35,8 @@ const Search = () => {
 				<button className='search' type='submit'>
 					Search
 				</button>
-				{error && <small className='error'>No results</small>}
 			</div>
+				{show && <small className='error'>{msg}</small>}
 		</Wrapper>
 	)
 }
@@ -61,6 +63,7 @@ const Wrapper = styled.form`
 		padding: 1rem 3rem;
 		border: none;
 		outline: none;
+		color: var(--fontColor);
 		background-color: transparent;
 		&:focus {
 			box-shadow: var(--boxShadow-2);
@@ -82,7 +85,7 @@ const Wrapper = styled.form`
 	.search {
 		position: absolute;
 		top: 50%;
-		right: 0.3rem;
+		right: -1rem;
 		transform: translateY(-50%);
 	}
 	.error {
@@ -94,7 +97,6 @@ const Wrapper = styled.form`
 		top: 50%;
 		right: 8rem;
 		transform: translateY(-50%);
-		display: none;
 	}
 `
 
