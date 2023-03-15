@@ -13,6 +13,7 @@ const GithubProvider = ({children}) =>{
     return theme
   }
   const [theme, setTheme] = useState(getLocalStorageTheme())
+  
 
   useEffect(() => {
 		document.documentElement.className = theme
