@@ -13,7 +13,6 @@ const Search = () => {
 		e.preventDefault()
 		if (user) {
 			searchGithubUser(user)
-			setUser('')
 		}
 	}
 	return (
@@ -35,8 +34,8 @@ const Search = () => {
 				<button className='search' type='submit'>
 					Search
 				</button>
-			</div>
 				{show && <small className='error'>{msg}</small>}
+			</div>
 		</Wrapper>
 	)
 }
@@ -65,9 +64,6 @@ const Wrapper = styled.form`
 		outline: none;
 		color: var(--fontColor);
 		background-color: transparent;
-		&:focus {
-			box-shadow: var(--boxShadow-2);
-		}
 	}
 	svg {
 		position: absolute;
