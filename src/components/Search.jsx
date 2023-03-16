@@ -27,13 +27,15 @@ const Search = () => {
 				<input
 					type='text'
 					aria-label='search'
-					placeholder='Search Github User'
+					placeholder='Search User'
 					value={user}
 					onChange={handleChange}
 				/>
-				<button className='search' type='submit'>
-					Search
-				</button>
+				{!isLoading && (
+					<button className='search' type='submit'>
+						Search
+					</button>
+				)}
 				{show && <small className='error'>{msg}</small>}
 			</div>
 		</Wrapper>
