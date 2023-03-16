@@ -1,12 +1,28 @@
 import React from 'react'
-import { Info, Navbar, Search } from './components'
-import { GlobalStyles } from './styles'
+import { Info, Loading, Navbar, Search } from './components'
 import styled from 'styled-components'
+import { useGithubContext } from './context/useGithubContext'
+import { GlobalStyles } from './styles'
 
 const App = () => {
+	const { isLoading } = useGithubContext()
+
+	if (isLoading) {
+		return (
+			<>
+				<GlobalStyles />
+				<Wrapper className='App'>
+					<Navbar />
+					<Search />
+					<Loading />
+				</Wrapper>
+			</>
+		)
+	}
+
 	return (
 		<>
-			<GlobalStyles />
+		<GlobalStyles />
 			<Wrapper className='App'>
 				<Navbar />
 				<Search />
