@@ -5,6 +5,7 @@ import twitterIcon from '../assets/icon-twitter.svg'
 import locationIcon from '../assets/icon-location.svg'
 import websiteIcon from '../assets/icon-website.svg'
 import companyIcon from '../assets/icon-company.svg'
+import { ProfileHeader } from './index'
 
 const Info = () => {
 	const { githubUser } = useGithubContext()
@@ -21,7 +22,7 @@ const Info = () => {
 		login,
 		location,
 		company,
-		html_url,
+		blog,
 	} = githubUser
 
 	const items = [
@@ -44,14 +45,7 @@ const Info = () => {
 
 	return (
 		<Wrapper className='sectionCenter'>
-			<div className='profileHeader'>
-				<img src={avatar_url} alt={name || 'the octocat'} />
-				<div className='profileInfo'>
-					<h1>{name || 'The Octocat'}</h1>
-					<p>{login || 'theoctocat'}</p>
-					<h2>joined{created_at}</h2>
-				</div>
-			</div>
+			<ProfileHeader />
 			<div className='profileBody'>
 				<p>
 					{bio ||
@@ -70,9 +64,9 @@ const Info = () => {
 						{location || 'earth'}
 					</li>
 					<li>
-							<img src={websiteIcon} alt='website' />
-						<a href={html_url} target='_blank' rel='noopener noreferrer'>
-							{html_url}
+						<img src={websiteIcon} alt='website' />
+						<a href={blog} target='_blank' rel='noopener noreferrer'>
+							{blog}
 						</a>
 					</li>
 					<li>
@@ -99,7 +93,8 @@ const Item = ({ label, value }) => {
 
 const Wrapper = styled.div`
 	display: grid;
-	place-content: center;
+	justify-content: start;
+	align-items: center;
 	gap: 2rem;
 	padding-block: 1rem;
 	border-radius: var(--borderRadius);
@@ -116,6 +111,7 @@ const Wrapper = styled.div`
 		img {
 			width: 70px;
 			height: 70px;
+			border-radius: 50%;
 
 			@media (min-width: 768px) {
 				width: 117px;
@@ -123,14 +119,18 @@ const Wrapper = styled.div`
 			}
 		}
 		.profileInfo {
+			width: 100%;
 			align-self: flex-start;
-			display: flex;
+			display: grid;
 			justify-content: start;
-			flex-direction: column;
+			grid-template-columns: 1fr;
 			@media (min-width: 1024px) {
-				width: 375px;
-				flex-direction: row;
-				justify-content: space-between;
+				grid-template-columns: repeat(2, 1fr);
+			}
+			small{
+				@media (min-width: 1024px) {
+					justify-self: center;
+				}
 			}
 		}
 	}
@@ -160,30 +160,34 @@ const Wrapper = styled.div`
 		width: 100%;
 		padding-inline: 1rem;
 		display: grid;
-		justify-content: start;
-		align-items: center;
-		grid-template-columns: 1fr;
-		@media (min-width: 768px) {
-			justify-content: center;
-			grid-template-columns: repeat(2, 1fr);
-		}
+		place-items: center;
 		ul {
+			width: 100%;
 			list-style: none;
-			padding:0;
+			padding: 0;
 			display: grid;
 			align-items: center;
+			justify-content: start;
+			grid-template-columns: 1fr;
 			gap: 1rem;
+			@media (min-width: 768px) {
+				justify-content: center;
+				grid-template-columns: repeat(2, 1fr);
+			}
 		}
-		li{
+		li {
 			width: 100%;
-			display:flex;
-			gap:1rem;
+			display: flex;
+			gap: 1rem;
+			@media (min-width: 768px) {
+				width: 50%;
+			}
 		}
 
 		a {
 			color: var(--fontColor);
 		}
-		img{
+		img {
 			height: 20px;
 		}
 	}
