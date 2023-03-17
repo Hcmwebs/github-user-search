@@ -33,6 +33,9 @@ const Wrapper = styled.nav`
 	}
 
 	.toggleBtn {
+		font-size: 0.8125rem;
+		font-weight: var(--bold);
+		line-height: 1.1875rem;
 		padding: 0.75rem 1.5rem;
 		display: flex;
 		justify-content: space-evenly;
@@ -40,9 +43,7 @@ const Wrapper = styled.nav`
 		gap: 1rem;
 		text-transform: uppercase;
 		background-color: transparent;
-		font-size: 0.8125rem;
-		font-weight: var(--bold);
-		line-height: 1.1875rem;
+		box-shadow:none;
 		color: var(--themeBtnColor);
 		transition: var(--transition-3);
 		&:hover {
