@@ -27,7 +27,7 @@ const ProfileBody = () => {
 		<Wrapper className='profileBody'>
 			<p>
 				{bio ||
-					'Lorem ipsum dolor sit amet consectetur, adipisicing elit. Veniam iure illum, earum assumenda eligendi mollitia vero minima neque nemo praesentium.'}
+					'Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Donec odio. Quisque volutpat mattis eros.'}
 			</p>
 			<div className='stats'>
 				{items.map((item) => {
@@ -40,8 +40,9 @@ const ProfileBody = () => {
 
 const Wrapper = styled.div`
 	&.profileBody {
+		width: 279px;
 		display: grid;
-		justify-content: start;
+		justify-content: center;
 		gap: 1rem;
 		padding-inline: 1.5rem;
 		p {
@@ -54,11 +55,18 @@ const Wrapper = styled.div`
 			}
 		}
 		.stats {
+			width: 279px;
 			display: flex;
 			justify-content: space-between;
 			padding: 1rem 0.9rem;
 			border-radius: var(--borderRadius);
 			background-color: var(--bgColor);
+			@media (min-width: 768px) {
+				width:493px;
+			}
+			@media (min-width: 768px) {
+				width:480px;
+			}
 
 			div {
 				display: grid;
