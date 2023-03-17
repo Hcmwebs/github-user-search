@@ -30,11 +30,11 @@ const Info = () => {
 					</li>
 					<li>
 						<img src={twitterIcon} alt={twitter_username} />@
-						{twitter_username || 'Not available'}
+						{twitter_username || 'notavailable'}
 					</li>
 					<li>
 						<img src={companyIcon} alt={company} />
-						{company || 'Not available'}
+						@{company || 'notavailable'}
 					</li>
 				</ul>
 			</div>
@@ -59,7 +59,7 @@ const Wrapper = styled.div`
 
 	.profileFooter {
 		width: 100%;
-		padding-inline: 1rem;
+		padding-inline: 1.5rem;
 		display: grid;
 		place-items: center;
 		ul {
@@ -77,11 +77,11 @@ const Wrapper = styled.div`
 			}
 		}
 		li {
-			width: 100%;
-			display: flex;
 			font-size: 0.8125rem;
 			font-weight: var(--regular);
 			line-height: 1.1875rem;
+			width: 100%;
+			display: flex;
 			gap: 1rem;
 		}
 
