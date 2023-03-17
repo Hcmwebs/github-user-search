@@ -40,12 +40,12 @@ const ProfileBody = () => {
 
 const Wrapper = styled.div`
 	&.profileBody {
-		width: 100%;
 		display: grid;
 		justify-content: start;
 		gap: 1rem;
 		padding-inline: 1.5rem;
 		p {
+			width: 100%;
 			font-size: 0.8125rem;
 			font-weight: var(--regular);
 			line-height: 1.5625rem;
