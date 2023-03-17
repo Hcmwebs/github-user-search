@@ -10,12 +10,7 @@ import { ProfileHeader, ProfileBody } from './index'
 const Info = () => {
 	const { githubUser } = useGithubContext()
 
-	const {
-		twitter_username,
-		location,
-		company,
-		blog,
-	} = githubUser
+	const { twitter_username, location, company, blog } = githubUser
 
 	return (
 		<Wrapper className='sectionCenter'>
@@ -24,22 +19,22 @@ const Info = () => {
 			<div className='profileFooter'>
 				<ul>
 					<li>
-						<img src={locationIcon} alt='location' />
-						{location || 'earth'}
+						<img src={locationIcon} alt={location} />
+						{location || 'Not available'}
 					</li>
 					<li>
-						<img src={websiteIcon} alt='website' />
+						<img src={websiteIcon} alt={blog} />
 						<a href={blog} target='_blank' rel='noopener noreferrer'>
-							{blog}
+							{blog || 'Not available'}
 						</a>
 					</li>
 					<li>
-						<img src={twitterIcon} alt='twitter' />
-						{twitter_username}
+						<img src={twitterIcon} alt={twitter_username} />@
+						{twitter_username || 'Not available'}
 					</li>
 					<li>
-						<img src={companyIcon} alt='company' />
-						{company || 'company'}
+						<img src={companyIcon} alt={company} />
+						{company || 'Not available'}
 					</li>
 				</ul>
 			</div>
@@ -48,6 +43,7 @@ const Info = () => {
 }
 
 const Wrapper = styled.div`
+	width: 100%;
 	display: grid;
 	justify-content: start;
 	align-items: center;
@@ -83,10 +79,10 @@ const Wrapper = styled.div`
 		li {
 			width: 100%;
 			display: flex;
+			font-size: 0.8125rem;
+			font-weight: var(--regular);
+			line-height: 1.1875rem;
 			gap: 1rem;
-			@media (min-width: 768px) {
-				width: 50%;
-			}
 		}
 
 		a {
