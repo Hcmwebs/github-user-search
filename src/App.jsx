@@ -34,17 +34,18 @@ const App = () => {
 
 const Wrapper = styled.main`
 	&.App {
-		width: 375px;
-		padding-block: 2rem;
+		width: min(100%, 327px);
+		padding-block:2rem;
 		display: grid;
 		place-items: center;
 		gap: 2.25rem;
 		@media (min-width: 768px) {
-			width: 573px;
+			width: min(100%,573px);
 			gap: 2.8rem;
+			padding: 0;
 		}
 		@media (min-width: 1440px) {
-			width: 730px;
+			width: min(100%,730px);
 			gap: 2.25rem;
 		}
 	}

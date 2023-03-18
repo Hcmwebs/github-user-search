@@ -50,6 +50,7 @@ const Wrapper = styled.div`
 			font-size: 0.8125rem;
 			font-weight: var(--regular);
 			line-height: 1.5625rem;
+			display: block;
 			@media (min-width: 768px) {
 				font-size: 0.9375rem;
 			}
@@ -62,10 +63,10 @@ const Wrapper = styled.div`
 			border-radius: var(--borderRadius);
 			background-color: var(--bgColor);
 			@media (min-width: 768px) {
-				width:493px;
+				width: 493px;
 			}
-			@media (min-width: 768px) {
-				width:480px;
+			@media (min-width: 1440px) {
+				width: 480px;
 			}
 
 			div {

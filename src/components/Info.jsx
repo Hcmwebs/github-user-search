@@ -33,8 +33,7 @@ const Info = () => {
 						{twitter_username || 'notavailable'}
 					</li>
 					<li>
-						<img src={companyIcon} alt={company} />
-						@{company || 'notavailable'}
+						<img src={companyIcon} alt={company} />@{company || 'notavailable'}
 					</li>
 				</ul>
 			</div>
@@ -43,7 +42,6 @@ const Info = () => {
 }
 
 const Wrapper = styled.div`
-	width: 100%;
 	display: grid;
 	justify-content: start;
 	align-items: center;
@@ -58,7 +56,6 @@ const Wrapper = styled.div`
 	}
 
 	.profileFooter {
-		width: 100%;
 		padding-inline: 1.5rem;
 		display: grid;
 		place-items: center;

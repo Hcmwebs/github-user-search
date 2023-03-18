@@ -43,7 +43,6 @@ const Search = () => {
 }
 
 const Wrapper = styled.form`
-	width: 100%;
 	display: grid;
 	place-items: center;
 	border-radius: var(--borderRadius);

@@ -55,11 +55,14 @@ html {
 body {
   font-family: 'Space Mono', monospace;
   font-weight:var(--regular);
-  min-height: 100vh;
-  display: grid;
-  place-items: center;
   background-color: var(--bgColor);
   color:var(--fontColor)
+}
+
+#root{
+  display: grid;
+  place-items: center;
+  min-height: 100vh;
 }
 
 p {margin:0;}

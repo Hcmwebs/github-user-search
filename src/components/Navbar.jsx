@@ -20,7 +20,6 @@ const Navbar = () => {
 }
 
 const Wrapper = styled.nav`
-	width: 100%;
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
@@ -43,21 +42,13 @@ const Wrapper = styled.nav`
 		gap: 1rem;
 		text-transform: uppercase;
 		background-color: transparent;
-		box-shadow:none;
+		box-shadow: none;
 		color: var(--themeBtnColor);
 		transition: var(--transition-3);
 		&:hover {
 			color: var(--themeBtnHoverColor);
 		}
 
-		/* svg {
-			width: 20px;
-			height: 20px;
-			color: var(--themeBtnColor);
-			&:hover {
-				color: var(--themeBtnHoverColor);
-			}
-		} */
 	}
 `
 
