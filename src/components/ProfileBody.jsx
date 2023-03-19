@@ -44,26 +44,28 @@ const Wrapper = styled.div`
 		justify-content: center;
 		gap: 1rem;
 		padding-inline: 1.5rem;
+
 		p {
-			width:279px;
+			max-width: 279px;
 			font-size: 0.8125rem;
 			font-weight: var(--regular);
 			line-height: 1.5625rem;
 			display: block;
 			@media (min-width: 768px) {
 				font-size: 0.9375rem;
-				width:493px;
+				max-width: 493px;
 			}
 			@media (min-width: 1024px) {
 				font-size: 0.9375rem;
-				width:480px;
+				max-width: 480px;
 			}
 		}
 		.stats {
 			width: 279px;
-			display: flex;
-			justify-content: space-between;
-			padding: 1rem 0.9rem;
+			display: grid;
+			place-items: center;
+			grid-template-columns: repeat(3, 1fr);
+			padding: 1rem;
 			border-radius: var(--borderRadius);
 			background-color: var(--bgColor);
 			@media (min-width: 768px) {
