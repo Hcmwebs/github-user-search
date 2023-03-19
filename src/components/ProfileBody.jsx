@@ -45,18 +45,18 @@ const Wrapper = styled.div`
 		gap: 1rem;
 		padding-inline: 1.5rem;
 		p {
-			width:min(100%,279px);
+			width:279px;
 			font-size: 0.8125rem;
 			font-weight: var(--regular);
 			line-height: 1.5625rem;
 			display: block;
 			@media (min-width: 768px) {
 				font-size: 0.9375rem;
-				width:min(100%,493px);
+				width:493px;
 			}
 			@media (min-width: 1024px) {
 				font-size: 0.9375rem;
-				width:min(100%,480px);
+				width:480px;
 			}
 		}
 		.stats {
@@ -69,7 +69,7 @@ const Wrapper = styled.div`
 			@media (min-width: 768px) {
 				width: 493px;
 			}
-			@media (min-width: 1440px) {
+			@media (min-width: 1024px) {
 				width: 480px;
 			}
 
