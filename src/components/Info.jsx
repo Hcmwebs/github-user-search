@@ -60,7 +60,7 @@ const Wrapper = styled.div`
 		display: grid;
 		place-items: center;
 		ul {
-			width: 100%;
+			width: 279px;
 			list-style: none;
 			padding: 0;
 			display: grid;
@@ -69,8 +69,12 @@ const Wrapper = styled.div`
 			grid-template-columns: 1fr;
 			gap: 1rem;
 			@media (min-width: 768px) {
+				width: 493px;
 				justify-content: center;
 				grid-template-columns: repeat(2, 1fr);
+			}
+			@media (min-width: 1024px) {
+				width: 480px;
 			}
 		}
 		li {
