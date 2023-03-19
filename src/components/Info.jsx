@@ -53,6 +53,7 @@ const Wrapper = styled.div`
 	position: relative;
 	@media (min-width: 1024px) {
 		padding-block: 2.75rem;
+		justify-content: end;
 	}
 
 	.profileFooter {
