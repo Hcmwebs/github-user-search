@@ -42,7 +42,7 @@ const GithubProvider = ({ children }) => {
 		if (response) {
 			setGithubUser(response.data)
 		} else {
-			toggleError(true, 'No Results!')
+			toggleError(true, 'No Results')
 		}
 		setIsLoading(false)
 	}

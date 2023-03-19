@@ -13,6 +13,7 @@ const Search = () => {
 		e.preventDefault()
 		if (user) {
 			searchGithubUser(user)
+			setUser('')
 		}
 	}
 	return (
@@ -43,7 +44,7 @@ const Search = () => {
 }
 
 const Wrapper = styled.form`
-width: 100%;
+	width: 100%;
 	display: grid;
 	place-items: center;
 	border-radius: var(--borderRadius);
@@ -83,7 +84,7 @@ width: 100%;
 	.search {
 		position: absolute;
 		top: 50%;
-		right: 0.75rem;
+		right: 0.5rem;
 		transform: translateY(-50%);
 	}
 	.error {
