@@ -120,10 +120,6 @@ img, picture, svg {
   max-width:100%;
   object-fit: cover
 }
-.sectionCenter{
-  width: 100%;
-  padding-inline: 1.5rem;
-}
 
 `
 export default GlobalStyles
