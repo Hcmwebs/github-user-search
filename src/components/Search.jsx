@@ -16,7 +16,7 @@ const Search = () => {
 		}
 	}
 	return (
-		<Wrapper className='sectionCenter' onSubmit={handleSubmit}>
+		<Wrapper onSubmit={handleSubmit}>
 			<div className='form-group'>
 				<svg height='24' width='25' xmlns='http://www.w3.org/2000/svg'>
 					<path
@@ -43,6 +43,7 @@ const Search = () => {
 }
 
 const Wrapper = styled.form`
+width: 100%;
 	display: grid;
 	place-items: center;
 	border-radius: var(--borderRadius);
@@ -82,7 +83,7 @@ const Wrapper = styled.form`
 	.search {
 		position: absolute;
 		top: 50%;
-		right: -1rem;
+		right: 0.75rem;
 		transform: translateY(-50%);
 	}
 	.error {

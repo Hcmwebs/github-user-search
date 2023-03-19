@@ -22,7 +22,7 @@ const App = () => {
 
 	return (
 		<>
-		<GlobalStyles />
+			<GlobalStyles />
 			<Wrapper className='App'>
 				<Navbar />
 				<Search />
@@ -34,18 +34,18 @@ const App = () => {
 
 const Wrapper = styled.main`
 	&.App {
-		width: min(100%, 327px);
-		padding-block:2rem;
+		width: 327px;
+		padding-block: 2rem;
 		display: grid;
 		place-items: center;
 		gap: 2.25rem;
 		@media (min-width: 768px) {
-			width: min(100%,573px);
+			width: 573px;
 			gap: 2.8rem;
 			padding: 0;
 		}
 		@media (min-width: 1440px) {
-			width: min(100%,730px);
+			width: 730px;
 			gap: 2.25rem;
 		}
 	}

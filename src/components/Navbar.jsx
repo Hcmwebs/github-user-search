@@ -6,7 +6,7 @@ import { LightBtn, DarkBtn } from './index'
 const Navbar = () => {
 	const { toggleTheme, theme } = useGithubContext()
 	return (
-		<Wrapper className='sectionCenter'>
+		<Wrapper>
 			<a href='#' className='logo'>
 				devfinder
 			</a>
@@ -20,6 +20,7 @@ const Navbar = () => {
 }
 
 const Wrapper = styled.nav`
+	width: 100%;
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
@@ -48,7 +49,6 @@ const Wrapper = styled.nav`
 		&:hover {
 			color: var(--themeBtnHoverColor);
 		}
-
 	}
 `
 

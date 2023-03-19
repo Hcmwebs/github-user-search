@@ -13,7 +13,7 @@ const Info = () => {
 	const { twitter_username, location, company, blog } = githubUser
 
 	return (
-		<Wrapper className='sectionCenter'>
+		<Wrapper>
 			<ProfileHeader />
 			<ProfileBody />
 			<div className='profileFooter'>
@@ -42,9 +42,9 @@ const Info = () => {
 }
 
 const Wrapper = styled.div`
+width: 100%;
 	display: grid;
-	justify-content: start;
-	align-items: center;
+	place-items: center;
 	gap: 2rem;
 	padding-block: 2rem;
 	border-radius: var(--borderRadius);
@@ -52,7 +52,7 @@ const Wrapper = styled.div`
 	box-shadow: var(--boxShadow-1);
 	position: relative;
 	@media (min-width: 1024px) {
-		padding-block: 2.75rem;
+		padding-block: 3rem;
 		justify-content: end;
 	}
 
@@ -91,7 +91,9 @@ const Wrapper = styled.div`
 			color: var(--fontColor);
 		}
 		img {
+			width: 20px;
 			height: 20px;
+			object-fit: contain;
 		}
 	}
 `
