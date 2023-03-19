@@ -40,19 +40,23 @@ const ProfileBody = () => {
 
 const Wrapper = styled.div`
 	&.profileBody {
-		width: 279px;
 		display: grid;
 		justify-content: center;
 		gap: 1rem;
 		padding-inline: 1.5rem;
 		p {
-			width: 100%;
+			width:min(100%,279px);
 			font-size: 0.8125rem;
 			font-weight: var(--regular);
 			line-height: 1.5625rem;
 			display: block;
 			@media (min-width: 768px) {
 				font-size: 0.9375rem;
+				width:min(100%,493px);
+			}
+			@media (min-width: 1024px) {
+				font-size: 0.9375rem;
+				width:min(100%,480px);
 			}
 		}
 		.stats {
