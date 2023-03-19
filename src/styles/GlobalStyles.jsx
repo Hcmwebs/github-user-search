@@ -10,6 +10,7 @@ const GlobalStyles = createGlobalStyle`
 --boxShadow-1: 0px 3px 25px 5px rgba(0,0,0,0.2);
 --boxShadow-2: 0px 3px 25px 5px rgba(0,0,0,0.4);
 --borderRadius: 15px;
+--borderRadiusBtn: 10px;
 
 --btnColor:#FFFFFF ;
 --btnBgColor:#0079FF ;
@@ -92,7 +93,7 @@ a {
 }
 
 button {
-  border-radius: var(--borderRadius);
+  border-radius: var(--borderRadiusBtn);
   border: 1px solid transparent;
   padding: 0.6em 1.2em;
   font-size: 1em;
