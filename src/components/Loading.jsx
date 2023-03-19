@@ -1,18 +1,19 @@
 import React from 'react'
-import { MagnifyingGlass } from 'react-loader-spinner'
+import { MagnifyingGlass, RevolvingDot } from 'react-loader-spinner'
 
 const Loading = () => {
 	return (
 		<>
-			<MagnifyingGlass
-				visible={true}
-				height='120'
-				width='120'
-				ariaLabel='MagnifyingGlass-loading'
-				wrapperStyle={{}}
-				wrapperClass='MagnifyingGlass-wrapper'
-				glassColor='transparent'
+			<RevolvingDot
+				height='100'
+				width='100'
+				radius='50'
 				color='#0079FF'
+				secondaryColor=''
+				ariaLabel='revolving-dot-loading'
+				wrapperStyle={{}}
+				wrapperClass=''
+				visible={true}
 			/>
 		</>
 	)
