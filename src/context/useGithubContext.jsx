@@ -1,6 +1,8 @@
 import React, { createContext, useContext, useState, useEffect } from 'react'
 import axios from 'axios'
 import mockUser from '../data/Data'
+
+
 const rootUrl = 'https://api.github.com'
 
 const GithubContext = createContext()
@@ -18,12 +20,9 @@ const GithubProvider = ({ children }) => {
 		}
 		return theme
 	}
+	
 	const [theme, setTheme] = useState(getLocalStorageTheme())
 
-	useEffect(() => {
-		document.documentElement.className = theme
-		localStorage.setItem('theme', theme)
-	}, [theme])
 
 	const toggleTheme = () => {
 		if (theme === 'lightTheme') {
@@ -34,10 +33,10 @@ const GithubProvider = ({ children }) => {
 	}
 
 	const searchGithubUser = async (user) => {
-    toggleError()
+		toggleError()
 		setIsLoading(true)
 		const response = await axios(`${rootUrl}/users/${user}`).catch((err) =>
-			console.log(err)
+		console.log(err)
 		)
 		if (response) {
 			setGithubUser(response.data)
@@ -50,6 +49,11 @@ const GithubProvider = ({ children }) => {
 	const toggleError = (show = false, msg = '') => {
 		setError({ show, msg })
 	}
+
+	useEffect(() => {
+		document.documentElement.className = theme
+		localStorage.setItem('theme', theme)
+	}, [theme])
 
 	return (
 		<GithubContext.Provider
