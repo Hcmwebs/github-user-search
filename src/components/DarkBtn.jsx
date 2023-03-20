@@ -1,6 +1,8 @@
 import React from 'react'
+import { useGithubContext } from '../context/useGithubContext'
 
-const DarkBtn = ({ toggleTheme }) => {
+const DarkBtn = () => {
+	const{ toggleTheme} = useGithubContext();
 	return (
 		<button className='toggleBtn' onClick={toggleTheme}>
 			dark

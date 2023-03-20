@@ -4,16 +4,16 @@ import { useGithubContext } from '../context/useGithubContext'
 import { LightBtn, DarkBtn } from './index'
 
 const Navbar = () => {
-	const { toggleTheme, theme } = useGithubContext()
+	const {theme } = useGithubContext()
 	return (
 		<Wrapper>
 			<a href='#' className='logo'>
 				devfinder
 			</a>
 			{theme === 'lightTheme' ? (
-				<DarkBtn toggleTheme={toggleTheme} />
+				<DarkBtn  />
 			) : (
-				<LightBtn toggleTheme={toggleTheme} />
+				<LightBtn/>
 			)}
 		</Wrapper>
 	)
