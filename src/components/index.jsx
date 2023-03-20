@@ -7,4 +7,5 @@ import Loading from './Loading'
 import ProfileHeader from './ProfileHeader'
 import ProfileBody from './ProfileBody'
 import ProfileBodyItem from './ProfileBodyItem'
-export { Navbar, Search, Info, LightBtn, DarkBtn,Loading,ProfileHeader, ProfileBody, ProfileBodyItem }
+import ProfileFooter from './ProfileFooter'
+export { Navbar, Search, Info, LightBtn, DarkBtn,Loading,ProfileHeader, ProfileBody, ProfileBodyItem,ProfileFooter }
