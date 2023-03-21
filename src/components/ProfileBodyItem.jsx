@@ -3,7 +3,7 @@ import React from 'react'
 const ProfileBodyItem = ({ label, value }) => {
 	return (
 		<div>
-			<h3>{label}</h3>
+			<h2>{label}</h2>
 			<p>{value}</p>
 		</div>
 	)

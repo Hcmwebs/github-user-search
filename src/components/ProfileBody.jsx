@@ -79,7 +79,7 @@ const Wrapper = styled.div`
 				display: grid;
 				place-items: center;
 
-				h3 {
+				h2 {
 					font-size: 0.6875rem;
 					font-weight: var(--regular);
 					line-height: 1rem;
