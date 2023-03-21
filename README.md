@@ -40,8 +40,8 @@ Users should be able to:
 
 ### Links
 
-- [Solution URL](https://your-solution-url.com)
-- [Live Site URL](https://your-live-site-url.com)
+- [Solution URL](https://www.frontendmentor.io/solutions/reactvitejsaxios-and-styled-components-gMzhtSrzyE)
+- [Live Site URL](https://github-user-search-puce.vercel.app/)
 
 ## My process
 
@@ -61,6 +61,7 @@ Users should be able to:
 - [ React-loader-spinner](https://mhnpd.github.io/react-loader-spinner/) - For the loading spinner
 
 ### What I learned
+
 - I learnt more of data fetching and display
 
 ### Continued development
