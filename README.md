@@ -57,7 +57,7 @@ Users should be able to:
 - [Styled Components](https://styled-components.com/) - For styles
 - [Axios](https://axios-http.com/) - For fetching data
 - [Github API ](https://api.github.com) - For data
-- [ Moment js ](https://momentjs.com/) - For formating and displaying the date
+- [ Moment js ](https://momentjs.com/) - For formatting and displaying the date
 - [ React-loader-spinner](https://mhnpd.github.io/react-loader-spinner/) - For the loading spinner
 
 ### What I learned
@@ -65,7 +65,7 @@ Users should be able to:
 
 ### Continued development
 
--Frontend development with React and soon to start with MERN stack for Full Stack Development.
+- Frontend development with React and soon to start with MERN stack for Full Stack Development.
 
 ### Useful resources
 
