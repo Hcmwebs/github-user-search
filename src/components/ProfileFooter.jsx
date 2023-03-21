@@ -14,20 +14,20 @@ const ProfileFooter = () => {
     <Wrapper className='profileFooter'>
 				<ul>
 					<li>
-						<img src={locationIcon} alt={location} />
+						<img src={locationIcon} alt= 'location' />
 						{location || 'Not available'}
 					</li>
 					<li>
-						<img src={websiteIcon} alt={blog} />
+						<img src={websiteIcon} alt='website or blog link' />
 						<a href={blog} target='_blank' rel='noopener noreferrer'>
 							{blog || 'Not available'}
 						</a>
 					</li>
 					<li>
-						<img src={twitterIcon} alt={twitter_username} />	{twitter_username || '@notavailable'}
+						<img src={twitterIcon} alt= 'twitter username' />	{twitter_username || '@notavailable'}
 					</li>
 					<li>
-						<img src={companyIcon} alt={company} />{company || '@notavailable'}
+						<img src={companyIcon} alt='company name' />{company || '@notavailable'}
 					</li>
 				</ul>
 			</Wrapper>
