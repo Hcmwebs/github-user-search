@@ -3,16 +3,16 @@ import styled from 'styled-components'
 import { useGithubContext } from '../context/useGithubContext'
 
 const Search = () => {
-	const [user, setUser] = useState('')
+	const [username, setUsername] = useState('')
 	const { isLoading, error, searchGithubUser } = useGithubContext()
 	const { show, msg } = error
 	const handleChange = (e) => {
-		setUser(e.target.value)
+		setUsername(e.target.value)
 	}
 	const handleSubmit = (e) => {
 		e.preventDefault()
-		if (user) {
-			searchGithubUser(user)
+		if (username) {
+			searchGithubUser(username)
 		}
 	}
 	return (
@@ -27,8 +27,8 @@ const Search = () => {
 				<input
 					type='text'
 					aria-label='search'
-					placeholder='Search User'
-					value={user}
+					placeholder='Search github user..'
+					value={username}
 					onChange={handleChange}
 				/>
 				{!isLoading && (

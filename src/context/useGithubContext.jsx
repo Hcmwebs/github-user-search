@@ -2,6 +2,7 @@ import React, { createContext, useContext, useState, useEffect } from 'react'
 import axios from 'axios'
 import mockUser from '../data/Data'
 
+//https://api.github.com/users/USERNAME
 
 const rootUrl = 'https://api.github.com'
 
@@ -20,7 +21,7 @@ const GithubProvider = ({ children }) => {
 		}
 		return theme
 	}
-	
+
 	const [theme, setTheme] = useState(getLocalStorageTheme())
 
 
@@ -32,10 +33,10 @@ const GithubProvider = ({ children }) => {
 		}
 	}
 
-	const searchGithubUser = async (user) => {
+	const searchGithubUser = async (username) => {
 		toggleError()
 		setIsLoading(true)
-		const response = await axios(`${rootUrl}/users/${user}`).catch((err) =>
+		const response = await axios(`${rootUrl}/users/${username}`).catch((err) =>
 		console.log(err)
 		)
 		if (response) {
